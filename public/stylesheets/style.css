@@ -1,0 +1,21 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.tdList{
+  width: 98px;
+}
+
+.tdList a{
+  float: left;
+  margin-right: 2px;
+}
+
+.tdList form{
+  width: 40px;
+  float: left;
+}

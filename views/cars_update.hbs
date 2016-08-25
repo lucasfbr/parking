@@ -1,0 +1,31 @@
+<section class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="text-center">Update Car</h4>
+    </div>
+    <div class="panel-body">
+        <form action="/cars/{{car.id}}" method="post">
+            <input type="hidden" name="_method" value="PUT">
+            <div class="form-group">
+                <input type="text" name="motorista" class="form-control" value="{{car.motorista}}">
+            </div>
+            <div class="form-group">
+                <input type="text" name="placa" class="form-control" value="{{car.placa}}">
+            </div>
+            <div class="form-group">
+                <select name="status" class="form-control">
+                    {{#equals car.status 'IN'}}
+                        <option value="IN" selected>Inside</option>
+                        <option value="OUT">Outside</option>
+                    {{/equals}}
+                    {{#equals car.status 'OUT'}}
+                        <option value="IN" >Inside</option>
+                        <option value="OUT" selected>Outside</option>
+                    {{/equals}}
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-success">
+            </div>
+        </form>
+    </div>
+</section>
